@@ -1,0 +1,50 @@
+@mixin holyGrailLayout($leftSliderWidth, $rightSliderWidth: 0) {
+  overflow: hidden;
+  padding-left: $leftSliderWidth;
+  padding-right: $rightSliderWidth;
+}
+@mixin holyGrailComponent {
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+@mixin holyGrailMainComponent {
+  width: 100%;
+}
+@mixin holyGrailLeftComponent($sliderWidth) {
+  width: $sliderWidth;
+  margin-left: -100%;
+  left: -$sliderWidth;
+}
+@mixin holyGrailRightComponent($sliderWidth) {
+  width: $sliderWidth;
+  margin-left: -$sliderWidth;
+  right: -$sliderWidth;
+}
+
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin inline-component {
+  box-sizing: border-box;
+  display: inline-block;
+  // font-size: 16px;
+  line-height: 1em;
+  position: relative;
+}
+
+@mixin clickable-component {
+  cursor: pointer;
+}
+
+@mixin disabled-component {
+  cursor: not-allowed;
+}
+
+@mixin borderRadius($radius: 4px) {
+  border-radius: $radius;
+}
